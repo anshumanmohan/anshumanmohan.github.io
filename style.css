@@ -5,12 +5,17 @@
 body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    font-weight: 300;
-   background-color: #ffe6e6;
-   font-size: 20px;
+   background-color: hsl(0, 50%, 95%);
+   font-size: 19px;
 }
 
 #name {
     font-size: 40px;
+}
+
+a, a:visited, a:hover, a:active {
+  color: black;
+  text-decoration-thickness: 0.5px;
 }
 
 .title {
@@ -19,7 +24,7 @@ body {
     font-size: 35px;
     padding-top: 2%;
     padding-left: 12.5%;
-    color: #ff9999;
+    color: #ff8080;
     font-weight: 100;
 }
 
@@ -28,10 +33,11 @@ body {
   width: 75%;
   display: grid;
   grid-template-columns: 3fr 5fr;
-  grid-column-gap: 5%;
+  grid-column-gap: 8%;
   grid-row-gap: 5%;
 }
 
-.info {
+.info, 
+.blurb {
   align-self: center;
 }
