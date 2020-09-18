@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Anshuman Mohan</title>
+  </head>
+
+  <body>
+
+    <div class="name">
+      <p>Anshuman Mohan</p>
+    </div>
+
+    <div class="grid">
+      
+      <div class="info contact">
+        <p>
+          PhD Candidate <br>    
+          Computer Science <br>     
+          Cornell University <br> <br>
+          Gates 430 <br>
+          mohan&#9424cs.cornell.edu
+        </p>
+      </div>
+
+      <div class="bio">
+        <p>I am a first-year PhD candidate at Cornell CS. 
+        My research is in Programming Languages. </p>
+
+        <p>Before Cornell, I was a research assistant for the inimitable Aquinas Hobor. Our work, essentially a large Coq development, eases the formal verification of graph-manipulating algorithms written in C. Fun highlights include a verified garbage collector for the CertiCoq compiler and the discovery of an overflow bug in Dijkstra's algorithm. </p>
+
+        <p>Before Aquinas, I was part of the inaugural cohort of  Yale-NUS College. I had the honor of giving the commencement speech for my graduating class, and currently serve on the Alumni Council. </p>
+      </div>
+    
+    </div>
+
+    <div class="title">
+      <p>Publications</p>
+    </div>
+
+    <div class="grid">
+      
+      <div class="ack info">
+        <p>Functional Proof Pearl: <br>
+        Inverting the Ackermann Hierarchy </p>
+        <p>Linh Tran, Anshuman Mohan, Aquinas Hobor <br>
+        CPP 2020, New Orleans </p>
+      </div>
+
+      <div class="ack blurb">
+        <p> We implement in Gallina a hierarchy of functions that calculate the upper inverses to the hyperoperation/Ackermann hierarchy. Our functions run in Θ(b) for inputs expressed in unary, and in O(b2) for inputs expressed in binary (where b = bitlength). We use our inverses to define linear- time functions—Θ(b) for both unary-represented and binary- represented inputs—that compute the upper inverse of the diagonal Ackermann function A(n). We show that these functions are consistent with the usual definition of the inverse Ackermann function α(n). </p>
+
+        <p> Slides &middot Paper </p>
+      </div>
+
+      <div class="autoquack info">
+        <p> Certifying Graph-Manipulating C Programs <br>
+        via Localizations within Data Structures </p>
+        <p> Shengyi Wang, Qinxiang Cao, <br>
+        Anshuman Mohan, Aquinas Hobor <br>
+        OOPSLA 2019, Athens </p>
+      </div>
+
+      <div class="autoquack blurb">
+        <p> We develop powerful and general techniques to mechanically verify realistic programs that manipulate heap- represented graphs. These graphs can exhibit well-known organization principles, such as being a directed acyclic graph or a disjoint-forest; alternatively, these graphs can be totally unstructured. The common thread for such structures is that they exhibit deep intrinsic sharing and can be expressed using the language of graph theory. We construct a modular and general setup for reasoning about abstract mathematical graphs and use separation logic to define how such abstract graphs are represented concretely in the heap. We develop a Localize rule that enables modular reasoning about such programs, and show how this rule can support existential quantifiers in postconditions and smoothly handle modified program variables. We demonstrate the generality and power of our techniques by integrating them into the Verified Software Toolchain and certifying the correctness of seven graph-manipulating programs written in CompCert C, including a 400-line generational garbage collector for the CertiCoq project. While doing so, we identify two places where the semantics of C is too weak to define generational garbage collectors of the sort used in the OCaml runtime. Our proofs are entirely machine-checked in Coq. </p>
+
+        <p> Slides &middot Paper </p>
+      </div>
+    
+    </div>
+
+    <div class="title">
+      <p>Presentations</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="gc-talk info">
+        <p> A Verified Garbage Collector for Gallina </p>
+        <p> APLAS NIER 2019, Bali <br>
+          MPI-SWS, Kaiserslautern <br>
+          University of Colorado, Boulder </p>
+      </div>
+
+      <div class="gc-talk blurb">
+        <p> In this talk I will report on the formal verification of an OCaml-style garbage collector (GC) servicing Gallina, the specification language within Coq. GCs are notoriously hard to verify, and Gallina's GC has sophisticated features that pose further challenges. Adding to this difficulty is the fact that we prove full functional correctness (and not just safety), and the fact that we verify real C code (and not an idealised verification-friendly language). Interestingly, our verification exposes two places where the semantics of C do not allow the formal specification and verification of OCaml-style GCs such as ours. </p>
+
+        <p> Slides </p>
+      </div>
+
+    </div>
+
+    <div class="title">
+      <p>Service</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="esop-2020 info">
+        <p> ESOP 2020 </p>
+      </div>
+
+      <div class="esop-2020 blurb">
+        <p> External Reviewer </p>
+      </div>
+
+    </div>
+
+    <div class="title">
+      <p>Personal</p>
+    </div>
+
+    <div class="grid">
+
+      <div class="fav-things info">
+        <p> A (working and dynamic) list of the ten best things I have consumed </p>
+      </div>
+
+      <div class="fav-things blurb">
+        <p> Sometimes a Great Notion <br>
+            Catch-22 <br>
+            The God of Small Things <br>
+            If You Have to be a Floor <br>
+            Gudeg <br>
+            You Want It Darker <br>
+            Shogun <br> 
+            Freedom at Midnight <br>
+            The Last Emperor <br>
+            This is Chance Redux </p>
+      </div>
+
+    </div>
+  </body>
+  
+</html> 
+
