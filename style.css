@@ -27,7 +27,7 @@ a:hover {
     text-align: left;
     font-size: 35px;
     padding-top: 5%;
-    padding-left: 12.5%;
+    padding-left: 13.5%;
     color: #ff8080;
     font-weight: 100;
 }
@@ -37,7 +37,8 @@ a:hover {
   width: 75%;
   display: grid;
   grid-template-columns: 3fr 5fr;
-  grid-column-gap: 8%;
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;  
 }
 
 .info, 
@@ -45,6 +46,14 @@ a:hover {
   align-self: center;
 }
 
+.info {
+  text-align: right;
+}
+
 .sc {
   font-variant: small-caps;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
