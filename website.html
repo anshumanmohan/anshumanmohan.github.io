@@ -4,6 +4,10 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <title>Anshuman Mohan</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
   </head>
 
   <body>
@@ -29,9 +33,9 @@
         <p>I am a first-year PhD candidate at Cornell Computer Science. 
         My research is in Programming Languages. </p>
 
-        <p>Before Cornell, I was a research assistant for the inimitable <a href="https://www.comp.nus.edu.sg/~hobor/">Aquinas Hobor</a>. Our work, essentially a large Coq development, eases the formal verification of graph-manipulating algorithms written in C. Fun highlights include a verified garbage collector for the CertiCoq compiler and the discovery of an overflow bug in Dijkstra's algorithm. </p>
+        <p>Before Cornell, I was a research assistant for <a href="https://www.comp.nus.edu.sg/~hobor/">Aquinas Hobor</a>. Our work, essentially a large Coq development, eases the formal verification of graph-manipulating algorithms written in C. Fun highlights include a verified garbage collector for the CertiCoq compiler and the discovery of an overflow bug in Dijkstra's algorithm. </p>
 
-        <p>Before Aquinas, I was part of the inaugural cohort of <a href="https://www.yale-nus.edu.sg/">Yale-NUS College</a>. I had the honor of giving the commencement speech for my graduating class, and currently serve on the Alumni Council. </p>
+        <p>Before Aquinas, I was part of the amazing inaugural cohort of <a href="https://www.yale-nus.edu.sg/">Yale-NUS College</a>. I had the honor of giving the commencement speech for my graduating class, and currently serve on the Alumni Council. </p>
       </div>
     
     </div>
@@ -50,7 +54,15 @@
       </div>
 
       <div class="ack blurb">
-        <p> We implement in Gallina a hierarchy of functions that calculate the upper inverses to the hyperoperation/Ackermann hierarchy. Our functions run in Theta(b) for inputs expressed in unary, and in O(b<sup>2</sup>) for inputs expressed in binary (where b = bitlength). We use our inverses to define linear-time functions - Theta(b) for both unary-represented and binary- represented inputs - that compute the upper inverse of the diagonal Ackermann function A(n). We show that these functions are consistent with the usual definition of the inverse Ackermann function alpha(n). </p>
+        <p> The Ackermann function \(\mathcal{A}\) grows explosively, and its inverse
+          \(\alpha\) is of interest in CS. Sadly, the standard practice of computing 
+          \(\alpha\) via \(\mathcal{A}\) is untenable.
+          In this paper, we give a new and efficient computation of \(\alpha\). 
+          We also give efficient computations for the 
+          closely-related and better-known hyperoperation hierarchy 
+          (\(+\), \(\times\), \(^\wedge\), tetration, ...) and <em>its</em> inverse
+          (\(-\), \(\div\), log, log\(^{*}\), ...).
+          This development is supported by proofs of correctness in Coq. </p>
 
         <p> Slides &middot Paper </p>
       </div>
@@ -90,7 +102,7 @@
       </div>
 
       <div class="dijk-talk info">
-        <p> Verified C Implementation of Dijksta's Algorithm </p>
+        <p> Verified C Implementation of Dijkstr  a's Algorithm </p>
         <p> Finalist at APLAS SRC 2019, Bali </p>
       </div>
 
@@ -122,20 +134,30 @@
     <div class="grid">
 
       <div class="fav-things info">
-        <p> A (dynamic) list of the ten best things I have consumed recently </p>
+        <p> A (dynamic) list of the eight best things I have consumed recently </p>
       </div>
 
       <div class="fav-things blurb">
-        <p> <a href="https://en.wikipedia.org/wiki/Sometimes_a_Great_Notion">Sometimes a Great Notion</a> <br>
-            Catch-22 <br>
-            The God of Small Things <br>
-            If You Have to be a Floor <br>
-            Gudeg <br>
-            You Want It Darker <br>
-            Shogun <br> 
-            Freedom at Midnight <br>
-            The Last Emperor <br>
-            This is Chance Redux </p>
+        <p> My favorite novels used to be 
+          <a href="https://en.wikipedia.org/wiki/Catch-22">Catch-22</a>
+          and
+          <a href="https://en.wikipedia.org/wiki/The_God_of_Small_Things">The God of Small Things</a>,
+          which worked nicely as a tragicomedy soup. 
+          <a href="https://en.wikipedia.org/wiki/Sometimes_a_Great_Notion">Sometimes a Great Notion</a>
+          has recently barged into these ranks. The meaning of this is as yet unclear. </p>
+
+        <p> <a href="https://thememorypalace.us/if-you-have-to-be-a-floor-the-met-residency-episode-6/">If You Have to be a Floor</a>
+          is a truly special podcast episode, more so because it is so ideally suited for the
+          audio medium. 
+          <a href="https://99percentinvisible.org/episode/this-is-chance-redux/">This is Chance!</a> 
+          is just an amazing story that I would consume every way I could. </p>
+
+        <p> A bowl of <a href="https://en.wikipedia.org/wiki/Gudeg">gudeg</a> 
+        I had in Yogyakarta is the best food I can remember from the past year.
+        I think <a href="https://youtu.be/YD6fvzGIBfQ">You Want It Darker</a> 
+          is a good song and 
+          <a href="https://en.wikipedia.org/wiki/The_Last_Emperor">The Last Emperor</a>
+          is a good movie.
       </div>
 
     </div>
