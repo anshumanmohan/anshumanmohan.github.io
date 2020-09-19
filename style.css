@@ -38,7 +38,6 @@ a:hover {
   display: grid;
   grid-template-columns: 3fr 5fr;
   grid-column-gap: 8%;
-  grid-row-gap: 5%;
 }
 
 .info, 
