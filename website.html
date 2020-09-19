@@ -33,9 +33,10 @@
         <p>I am a first-year PhD candidate at Cornell Computer Science. 
         My research is in Programming Languages. </p>
 
-        <p>Before Cornell, I was a research assistant for <a href="https://www.comp.nus.edu.sg/~hobor/">Aquinas Hobor</a>. Our work, essentially a large Coq development, eases the formal verification of graph-manipulating algorithms written in C. Fun highlights include a verified garbage collector for the CertiCoq compiler and the discovery of an overflow bug in Dijkstra's algorithm. </p>
+        <p>Before Cornell, I was a research assistant for <a href="https://www.comp.nus.edu.sg/~hobor/">Aquinas Hobor</a>. Our main
+        project was a Coq development eases the formal verification of graph-manipulating algorithms written in C. Fun highlights include a verified garbage collector for the CertiCoq compiler and the discovery of an overflow bug in Dijkstra's algorithm. </p>
 
-        <p>Before Aquinas, I was part of the amazing inaugural cohort of <a href="https://www.yale-nus.edu.sg/">Yale-NUS College</a>. I had the honor of giving the commencement speech for my graduating class, and currently serve on the Alumni Council. </p>
+        <p>Before Aquinas, I was part of the amazing inaugural cohort of <a href="https://www.yale-nus.edu.sg/">Yale-NUS College</a>. I had the honor of giving the commencement speech for my graduating class, and serve on the Alumni Council. </p>
       </div>
     
     </div>
@@ -51,20 +52,24 @@
         Inverting the Ackermann Hierarchy </p>
         <p>Tran, Mohan, Hobor <br>
         CPP 2020, New Orleans </p>
+        <p> Slides 
+            &middot 
+            Paper 
+            &middot 
+            <a href="https://github.com/inv-ack/inv-ack">Codebase</a></p>
       </div>
 
       <div class="ack blurb">
         <p> The Ackermann function \(\mathcal{A}\) grows explosively, and its inverse
           \(\alpha\) is of interest in CS. Sadly, the standard practice of computing 
           \(\alpha\) via \(\mathcal{A}\) is untenable.
-          In this paper, we give a new and efficient computation of \(\alpha\). 
+          We give a new and efficient computation of \(\alpha\). 
           We also give efficient computations for the 
-          closely-related and better-known hyperoperation hierarchy 
-          (\(+\), \(\times\), \(^\wedge\), tetration, ...) and <em>its</em> inverse
-          (\(-\), \(\div\), log, log\(^{*}\), ...).
-          This development is supported by proofs of correctness in Coq. </p>
-
-        <p> Slides &middot Paper </p>
+          related and better-known hyperoperation hierarchy 
+          (\(+\), \(\times\), exp, tetration, etc) and <em>its</em> inverse
+          (\(-\), \(\div\), log, log\(^{*}\), etc).
+          Our definitions are proved correct in Coq, 
+          and our timebounds are benchmarked after extraction to OCaml. </p>
       </div>
 
       <div class="autoquack info">
@@ -72,12 +77,27 @@
         via Localizations within Data Structures </p>
         <p> Wang, Cao, Mohan, Hobor <br>
         OOPSLA 2019, Athens </p>
+        <p> Slides 
+            &middot 
+            Paper 
+            &middot 
+            Poster
+            &middot
+            Codebase </p>
       </div>
 
       <div class="autoquack blurb">
-        <p> We develop powerful and general techniques to mechanically verify realistic programs that manipulate heap- represented graphs. These graphs can exhibit well-known organization principles, such as being a directed acyclic graph or a disjoint-forest; alternatively, these graphs can be totally unstructured. The common thread for such structures is that they exhibit deep intrinsic sharing and can be expressed using the language of graph theory. We construct a modular and general setup for reasoning about abstract mathematical graphs and use separation logic to define how such abstract graphs are represented concretely in the heap. We develop a Localize rule that enables modular reasoning about such programs, and show how this rule can support existential quantifiers in postconditions and smoothly handle modified program variables. We demonstrate the generality and power of our techniques by integrating them into the Verified Software Toolchain and certifying the correctness of seven graph-manipulating programs written in CompCert C, including a 400-line generational garbage collector for the CertiCoq project. While doing so, we identify two places where the semantics of C is too weak to define generational garbage collectors of the sort used in the OCaml runtime. Our proofs are entirely machine-checked in Coq. </p>
+        <p> The formal verification of graph algorithms is hard: nodes can be shared
+          arbitrarily, making it hard to "frame away" the uninvolved parts of a graph.
+          We tackle this issue via a new <span class="sc">localize</span> rule, 
+          develop an extensible Coq library to further ease 
+          such verifications, and use the library to verify seven 
+          graph algorithms written in C. Our flagship example is a 
+          generational garbage collector.
+          We identify two places where the semantics of C is too restrictive to define 
+          OCaml-style GCs.
+          Our proofs are checked in Coq. </p>
 
-        <p> Slides &middot Paper </p>
       </div>
     
     </div>
@@ -93,17 +113,36 @@
         <p> APLAS NIER 2019, Bali <br>
           MPI-SWS, Kaiserslautern <br>
           University of Colorado, Boulder </p>
+        <p> Slides 
+            &middot
+            Codebase </p>
       </div>
 
       <div class="gc-talk blurb">
-        <p> In this talk I will report on the formal verification of an OCaml-style garbage collector (GC) servicing Gallina, the specification language within Coq. GCs are notoriously hard to verify, and Gallina's GC has sophisticated features that pose further challenges. Adding to this difficulty is the fact that we prove full functional correctness (and not just safety), and the fact that we verify real C code (and not an idealised verification-friendly language). Interestingly, our verification exposes two places where the semantics of C do not allow the formal specification and verification of OCaml-style GCs such as ours. </p>
+        <p> CertiCoq compiles Gallina into C;
+          the transition from an infinite heap to a 
+          finite one is supported by garbage collection 
+          at the C level. 
+          We get into the weeds of the verfication of this GC, 
+          showing how the correctness property&mdash;a form of
+          graph isomorphism&mdash;is broken and recovered.
+          In two places, we find that the semantics of C 
+          are too restrictive to define the 
+          behavior we need. We suspect these restrictions 
+          will ail future verifications of OCaml-style GCs. 
+          
 
-        <p> Slides </p>
+<!-- Interestingly, our verification exposes two places where the semantics of C do not allow the formal specification and verification of OCaml-style GCs such as ours.
+-->
+         </p>
       </div>
 
       <div class="dijk-talk info">
-        <p> Verified C Implementation of Dijkstr  a's Algorithm </p>
+        <p> Verified C Implementation of Dijkstra's Algorithm </p>
         <p> Finalist at APLAS SRC 2019, Bali </p>
+        <p> Slides
+            &middot
+            Poster </p>
       </div>
 
       <div class="dijk-talk blurb">
@@ -147,10 +186,9 @@
           has recently barged into these ranks. The meaning of this is as yet unclear. </p>
 
         <p> <a href="https://thememorypalace.us/if-you-have-to-be-a-floor-the-met-residency-episode-6/">If You Have to be a Floor</a>
-          is a truly special podcast episode, more so because it is so ideally suited for the
-          audio medium. 
+          is a truly special podcast episode, more so because it is so ideally suited for audio.
           <a href="https://99percentinvisible.org/episode/this-is-chance-redux/">This is Chance!</a> 
-          is just an amazing story that I would consume every way I could. </p>
+          is an amazing story that I'd consume in every medium imaginable. </p>
 
         <p> A bowl of <a href="https://en.wikipedia.org/wiki/Gudeg">gudeg</a> 
         I had in Yogyakarta is the best food I can remember from the past year.

@@ -13,9 +13,13 @@ body {
     font-size: 40px;
 }
 
-a, a:visited, a:hover, a:active {
+a, a:visited, a:active {
   color: black;
   text-decoration-thickness: 0.5px;
+}
+
+a:hover {
+  text-decoration: none; 
 }
 
 .title {
@@ -40,4 +44,8 @@ a, a:visited, a:hover, a:active {
 .info, 
 .blurb {
   align-self: center;
+}
+
+.sc {
+  font-variant: small-caps;
 }
