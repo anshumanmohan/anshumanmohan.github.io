@@ -88,7 +88,7 @@
             We also give efficient computations for the 
             related and better-known hyperoperation hierarchy 
             <span class="nowrap">(\(+\), \(\times\), exp, tetration, etc)</span> 
-            and <em>its</em> inverse
+            and its inverse
             <span class="nowrap">(\(-\), \(\div\), log, log\(^{*}\), etc)</span>.
             Our definitions are proved correct in Coq, 
             and our time bounds are benchmarked after extraction to OCaml. </p>
@@ -110,12 +110,12 @@
 
       <div class="autoquack blurb">
         <p> The formal verification of graph algorithms is hard: nodes can be shared
-            arbitrarily, making it hard to "frame away" the uninvolved 
-            parts of a graph.
-            We tackle this issue via a new <span class="sc">localize</span> rule, 
+            arbitrarily, so uninvolved subgraphs cannot be "framed away".
+            We address this with a new separation logic rule
+            called <span class="sc">localize</span>, 
             develop an extensible Coq library to further ease 
-            such verifications, and use the library to verify seven 
-            graph algorithms written in C. Our flagship example is a 
+            verifications, and use the library to verify seven 
+            graph-manipulating C programs. Our flagship example is a 
             generational garbage collector.
             We identify two places where the semantics of C is 
             too restrictive to define 
